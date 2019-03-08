@@ -1,0 +1,157 @@
+﻿<UserControl x:Class="Kalantyr.PhotoFilter.Filters.НастройкиПлюща"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <UserControl.Resources>
+        
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Начальная позиция по Х:"/>
+        <TextBox Text="{Binding НачальнаяПозицияX, Mode=TwoWay}" Grid.Column="1"/>
+
+        <TextBlock Text="Начальная позиция по Y:" Grid.Row="1"/>
+        <TextBox Text="{Binding НачальнаяПозицияY, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"/>
+
+        <TextBlock Text="Начальная толщина:" Grid.Row="2"/>
+        <TextBox Text="{Binding НачальнаяТолщина, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"/>
+
+        <TextBlock Text="Минимальная толщина:" Grid.Row="3"/>
+        <TextBox Text="{Binding МинимальнаяТолщина, Mode=TwoWay}" Grid.Row="3" Grid.Column="1"/>
+
+        <TextBlock Text="Убывание толщины:" Grid.Row="4"/>
+        <TextBox Text="{Binding УбываниеТолщины, Mode=TwoWay}" Grid.Row="4" Grid.Column="1"/>
+
+        <TextBlock Text="Длина:" Grid.Row="5"/>
+        <TextBox Text="{Binding Длина, Mode=TwoWay}" Grid.Row="5" Grid.Column="1"/>
+
+        <TextBlock Text="Количество главых ветвей:" Grid.Row="6"/>
+        <TextBox Text="{Binding КоличествоГлавныхВетвей, Mode=TwoWay}" Grid.Row="6" Grid.Column="1"/>
+
+        <Border Style="{StaticResource Рамка}" Grid.Row="7" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вероятность новой ветви:" Grid.Row="0"/>
+                <TextBox Text="{Binding ВероятностьНовойВетви, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"/>
+
+				<TextBlock Text="Вероятность резкого поворота:" Grid.Row="1"/>
+				<TextBox Text="{Binding ВероятностьРезкогоПоворота, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"/>
+
+				<TextBlock Text="Отклонение новой ветви:" Grid.Row="2"/>
+                <TextBox Text="{Binding ОтклонениеНовойВетви, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"/>
+
+                <TextBlock Text="Предельный угол создания ветви:" Grid.Row="3"/>
+                <TextBox Text="{Binding ПредельныйУголСозданияВетви, Mode=TwoWay}" Grid.Row="3" Grid.Column="1"/>
+
+                <TextBlock Text="Предельная глубина ветвей:" Grid.Row="4"/>
+                <TextBox Text="{Binding ПредельнаяГлубина, Mode=TwoWay}" Grid.Row="4" Grid.Column="1"/>
+
+            </Grid>
+        </Border>
+
+        <Border Style="{StaticResource Рамка}" Grid.Row="8" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Поворот:" Grid.Row="0"/>
+                <TextBox Text="{Binding Поворот, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"/>
+
+                <TextBlock Text="Поворот 1:" Grid.Row="1"/>
+                <TextBox Text="{Binding УскорениеПоворота, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"/>
+
+                <TextBlock Text="Поворот 2:" Grid.Row="2"/>
+                <TextBox Text="{Binding УскорениеУскоренияПоворота, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"/>
+
+                <TextBlock Text="Поворот 3:" Grid.Row="3"/>
+                <TextBox Text="{Binding УскорениеУскоренияУскоренияПоворота, Mode=TwoWay}" Grid.Row="3" Grid.Column="1"/>
+
+                <TextBlock Text="Предельный поворот:" Grid.Row="4"/>
+                <TextBox Text="{Binding ПредельныйПоворот, Mode=TwoWay}" Grid.Row="4" Grid.Column="1"/>
+
+            </Grid>
+        </Border>
+
+        <CheckBox Content="Трава" IsChecked="{Binding Трава, Mode=TwoWay}" Grid.Row="9" Grid.Column="1"/>
+
+        <CheckBox Content="Инвертировать прозрачность" IsChecked="{Binding ИнвертироватьПрозрачность, Mode=TwoWay}" Grid.Row="10" Grid.Column="1"/>
+
+        <TextBlock Text="Изменение цвета:" Grid.Row="11"/>
+        <TextBox Text="{Binding ИзменениеЦвета, Mode=TwoWay}" Grid.Row="11" Grid.Column="1"/>
+
+        <CheckBox Content="Использовать синус" IsChecked="{Binding Sin, Mode=TwoWay}" Grid.Row="12" Grid.Column="1"/>
+		
+		<Border Style="{StaticResource Рамка}" Grid.Row="13" Grid.ColumnSpan="2">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+
+				<CheckBox Content="Рисовать кругами" IsChecked="{Binding РисоватьКругами, Mode=TwoWay}" Grid.ColumnSpan="2"/>
+
+				<TextBlock Text="Отступ кругов:" Grid.Row="1"/>
+				<TextBox Text="{Binding ОтступКругов, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"/>
+
+				<TextBlock Text="Толщина контура:" Grid.Row="2"/>
+				<TextBox Text="{Binding ТолщинаКонтура, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"/>
+
+				<CheckBox Content="Уменьшать шаг" IsChecked="{Binding УменьшатьШаг, Mode=TwoWay}" Grid.Row="3" Grid.ColumnSpan="2"/>
+			</Grid>
+		</Border>
+
+	</Grid>
+</UserControl>

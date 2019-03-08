@@ -1,0 +1,66 @@
+﻿<UserControl
+    x:Class="Kalantyr.PhotoFilter.Filters.НастройкиАкварельнойЗвезды"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Скорость таяния:" Grid.Row="1"/>
+        <TextBox Text="{Binding СкоростьТаяния, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"/>
+
+        <TextBlock Text="Порог таяния:" Grid.Row="2"/>
+        <TextBox Text="{Binding ПорогТаяния, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"/>
+
+        <TextBlock Text="Макс. количество лучей:" Grid.Row="3"/>
+        <TextBox Text="{Binding МаксКоличествоЛучей, Mode=TwoWay}" Grid.Row="3" Grid.Column="1"/>
+
+		<TextBlock Text="Количество колец:" Grid.Row="4"/>
+		<TextBox Text="{Binding КоличествоКолец, Mode=TwoWay}" Grid.Row="4" Grid.Column="1"/>
+
+		<TextBlock Text="Количество случайных точек:" Grid.Row="5"/>
+		<TextBox Text="{Binding КоличествоСлучайныхТочек, Mode=TwoWay}" Grid.Row="5" Grid.Column="1"/>
+		
+		<TextBlock Text="Непрозрачность:" Grid.Row="6"/>
+        <TextBox Text="{Binding МаксНепрозрачность, Mode=TwoWay}" Grid.Row="6" Grid.Column="1"/>
+
+        <CheckBox Content="Пятно в центре" IsChecked="{Binding ПятноВЦентре, Mode=TwoWay}" Grid.Row="7" Grid.ColumnSpan="2"/>
+
+        <CheckBox Content="Лучи" IsChecked="{Binding Лучи, Mode=TwoWay}" Grid.Row="8" Grid.ColumnSpan="2"/>
+
+		<TextBlock Text="Изменение цвета:" Grid.Row="9"/>
+		<TextBox Text="{Binding ИзменениеЦвета, Mode=TwoWay}" Grid.Row="9" Grid.Column="1"/>
+
+		<TextBlock Text="Вероятность увеличения прозрачности:" Grid.Row="10"/>
+		<TextBox Text="{Binding ВероятностьУвеличенияПрозрачности, Mode=TwoWay}" Grid.Row="10" Grid.Column="1"/>
+
+		<TextBlock Text="Изображение-источник случайных точек:" Grid.Row="11" Grid.ColumnSpan="2"/>
+		<TextBox Text="{Binding BkImageName, Mode=TwoWay}" Grid.Row="12" Grid.ColumnSpan="2"/>
+	</Grid>
+</UserControl>

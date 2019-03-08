@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="Kalantyr.PhotoFilter.Filters.НастройкиАкварели"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Цветное изображение:"/>
+        <TextBox Text="{Binding ColorImagePath, Mode=TwoWay}" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+        <CheckBox Content="Использовать контуры" IsChecked="{Binding ИспользоватьГраницы, Mode=TwoWay}" Grid.Row="2" Grid.ColumnSpan="2"/>
+
+        <TextBlock Text="Изображение с контурами:" Grid.Row="3"/>
+        <TextBox Text="{Binding LinesImagePath, Mode=TwoWay}" Grid.Row="4" Grid.ColumnSpan="3"/>
+
+        <TextBlock Text="Количество пятен:" Grid.Row="5"/>
+        <TextBox Text="{Binding КоличествоПятен, Mode=TwoWay}" Grid.Row="5" Grid.Column="1"/>
+
+        <TextBlock Text="Скорость таяния:" Grid.Row="7"/>
+        <TextBox Text="{Binding СкоростьТаяния, Mode=TwoWay}" Grid.Row="7" Grid.Column="1"/>
+
+        <TextBlock Text="Порог таяния:" Grid.Row="8"/>
+        <TextBox Text="{Binding ПорогТаяния, Mode=TwoWay}" Grid.Row="8" Grid.Column="1"/>
+
+        <TextBlock Text="Непрозрачность:" Grid.Row="9"/>
+        <TextBox Text="{Binding МаксНепрозрачность, Mode=TwoWay}" Grid.Row="9" Grid.Column="1"/>
+
+        <TextBlock Text="Непрозрачность границ:" Grid.Row="10"/>
+        <TextBox Text="{Binding НепрозрачностьГраниц, Mode=TwoWay}" Grid.Row="10" Grid.Column="1"/>
+
+        <CheckBox Content="Дорисовать линии" IsChecked="{Binding ДорисоватьЛинии, Mode=TwoWay}" Grid.Row="11" Grid.ColumnSpan="2"/>
+    </Grid>
+    
+</UserControl>

@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Kalantyr.PhotoFilter.Filters.НастройкиФигур"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <UserControl.Resources>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Количество фигур:"/>
+        <TextBox Text="{Binding КоличествоФигур, Mode=TwoWay}" Grid.Column="1"/>
+
+        <TextBlock Text="Размер фигур:" Grid.Row="1"/>
+        <TextBox Text="{Binding РазмерФигур, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"/>
+
+        <TextBlock Text="Тип фигур:" Grid.Row="2"/>
+        <ComboBox x:Name="_типФигур" Text="{Binding ТипФигур, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+
+        <TextBlock Text="Непрозрачность:" Grid.Row="3"/>
+        <TextBox Text="{Binding Непрозрачность, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
+
+    </Grid>
+</UserControl>
